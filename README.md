@@ -4,4 +4,4 @@ Using code with small modifications from https://github.com/Brian-hongyan/DeepCo
 
 Human Proteome AF dataset used for creating the binding pockets (environments of cysteines): https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000005640_9606_HUMAN_v4.tar
 
-The file hct116_iwthout_CR.csv comes from the study by Kuljanin et al. https://www.nature.com/articles/s41587-020-00778-3  -> it is just modified to sui tthe objective of classification
+The file hct116_iwthout_CR.csv comes from the study by Kuljanin et al. https://www.nature.com/articles/s41587-020-00778-3  -> it is just modified to suit the objective of classification
