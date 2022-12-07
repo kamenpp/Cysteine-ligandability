@@ -21,5 +21,4 @@ A study by Kuljanin et al. (doi:10.1038/s41587-020-00778-3) identifies experimen
 ## What have I done?
 I got the human proteome from AlphaFold database (https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000005640_9606_HUMAN_v4.tar) and used that to create the cysteine environments (including all amino acid residues within 10 Å of the cysteine S). Unlike Du et al. who use Chimera UCSF, I used MDAnalysis (https://www.mdanalysis.org) to extract the pocket environment pdb files (I can provide a compressed copy of these on request, ~1.2 GB). An interesting question here would be whether to include only the atoms within these 10 Å or the whole amino acid residues. I opted for the latter as otherwise there would be some atoms disconnect from all of the rest and hence would not contribute to the message passing. This is also what Du et al. seem to have done. This is in preparing_pdb_pockets.ipynb.
 
-
-
+Then, I went on to create the graphs (and the dataset). For that, I used mostly code from Du et al. for the featurisation of nodes (atoms) and edges (bonds). I added a check for whether the cysteine sulfurs are in a disulfide bridge, and if they are, I just exclude them from the dataset because they are obviously negative (already bound, not nucleophilic, don't need a model to tell me that). This also decreased the class imbalance slightly.
